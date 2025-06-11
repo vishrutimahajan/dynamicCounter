@@ -64,3 +64,44 @@ const reset = () => setCount(0);
 }
 
 export default App;
+
+
+/*
+import {useState, useEffect } from 'react';
+import './App.css';
+function App() {
+const [time, setTime] = useState(new Date());
+  const [isTimer, setTimer] = useState(false);
+
+  const toggleTimer = () => {
+    setTimer(prev => !prev);
+  };
+
+  useEffect(() => {
+    let interval;
+    if (isTimer) {
+      interval = setInterval(() => {
+        setTime(new Date());
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isTimer]);
+
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+
+  return (
+    <div>
+      <h1>CURRENT TIME</h1>
+      <p>
+        Current time: {hours} : {minutes} : {seconds}
+      </p>
+      <button onClick={toggleTimer}>
+        {isTimer ? '⏹️ Stop Timer' : '▶️ Start Timer'}
+      </button>
+    </div>
+  );
+}export default App;
+*/
